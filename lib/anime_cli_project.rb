@@ -1,6 +1,4 @@
-require "anime_cli_project/version"
+require "bundler/setup"
+Bundler.require(:default)
+require_all "lib"
 
-module AnimeCliProject
-  class Error < StandardError; end
-  # Your code goes here...
-end
