@@ -6,15 +6,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nathan Miller"]
   spec.email         = ["natem31190@gmail.com"]
 
-  spec.summary       = "Anime CLI project"
-  spec.description   = "Anime CLI project"
+  spec.summary       = "Anime GEM" 
+  spec.description   = "Anime GEM"
   spec.homepage      = "https://github.com/UntuckedShirt/anime_CLI_project"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "https://github.com/UntuckedShirt/anime_CLI_project"
 
-  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["homepage_uri"] = "https://github.com/UntuckedShirt/anime_CLI_project"
   spec.metadata["source_code_uri"] = "https://github.com/UntuckedShirt/anime_CLI_project"
   spec.metadata["changelog_uri"] = "https://github.com/UntuckedShirt/anime_CLI_project"
 

@@ -8,7 +8,9 @@ class Anime
     @@all = []
     def initialize(hash)
         hash.each do |k,v|
+            #x = "@#{k.to_s}= #{v}"
             self.send("#{k}=", v)
+            #binding.pry
         end
         save
     end 

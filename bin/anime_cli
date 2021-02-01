@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "dotenv/load"
+require "bundler/setup"
+require "anime_cli_project"
+
+
+cli = CLI.new
+cli.run 
+
+#testing
+
+#api = Api.new("https://api.jikan.moe/v3")
+
+#api.find_anime_by_name("goblin_slayer")

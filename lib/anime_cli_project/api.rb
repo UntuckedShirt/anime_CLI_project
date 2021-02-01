@@ -19,7 +19,7 @@ class Api
         anime_hash = {}
         # anime_name = Anime_name.new(data)
         data["results"].each do |res|
-            # binding.pry
+            #binding.pry
             anime_hash = {
                 ## use data["results"]
                 title: res["title"],
@@ -33,8 +33,11 @@ class Api
                 members: res["members"],
                 rated: res["rated"]
             }
+            
+            #binding.pry
             ## create an obj 
-            Anime.new(anime_hash)
+            anime = Anime.new(anime_hash)
+            puts anime.title
         end
         # "title"=>"Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
         # "airing"=>false,
@@ -47,7 +50,7 @@ class Api
         # "members"=>35493,
         # "rated"=>"R"
         # Anime.new(anime_hash)
-        binding.pry
+      
         
     end
 
@@ -59,7 +62,7 @@ end
 
 
 api = Api.new
-api.find_anime_by_name("goblin_slayer")
+api.find_anime_by_name("boxing")
 
 ## move anime to own file 
 
