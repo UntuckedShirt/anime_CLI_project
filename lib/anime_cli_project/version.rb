@@ -1,5 +1,5 @@
-require "anime_cli_project/version"
-require "pry"
+# require "anime_cli_project/version"
+# require "pry"
 
 #require all files here
 ##require all "TOOLSETS/LIBRARIES"

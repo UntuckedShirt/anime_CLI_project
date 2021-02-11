@@ -5,9 +5,9 @@ require "bundler/setup"
 Bundler.require(:default)
 require_all "lib"
 
-require "anime_cli_project/version"
-require_relative "./anime_cli_project/anime"
-require_relative "./anime_cli_project/api"
+# require "anime_cli_project/version"
+# require_relative "./anime_cli_project/anime"
+# require_relative "./anime_cli_project/api"
 
 
 

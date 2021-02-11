@@ -2,7 +2,7 @@
 
 require "dotenv/load"
 require "bundler/setup"
-require "anime_cli_project"
+require_relative "../lib/anime_cli_project"
 
 
 cli = CLI.new

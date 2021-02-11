@@ -13,22 +13,24 @@ class Anime
             #binding.pry
         end
         save
+        
     end 
 
     def self.all
         @@all
     end
 
-    def save 
-        @@all << self
+    def save
+        found_anime = @@all.select do |anime|
+            anime.title == @title
+        end
+        if found_anime.length < 1
+            @@all << self
+        end
     end
     
     def is_popular
         members > 20000 ? true : false
-    end 
-
-    def is_airing 
-    end_date ? false : true
     end 
 
     private 

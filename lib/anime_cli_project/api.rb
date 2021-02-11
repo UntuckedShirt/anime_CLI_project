@@ -18,26 +18,27 @@ class Api
         data = HTTParty.get(req_url)
         anime_hash = {}
         # anime_name = Anime_name.new(data)
-        data["results"].each do |res|
-            #binding.pry
-            anime_hash = {
-                ## use data["results"]
-                title: res["title"],
-                synopsis: res["synopsis"],
-                airing: res["airing"],
-                type: res["type"],
-                episodes: res["episodes"],
-                score: res["score"],
-                start_date: res["start_date"],
-                end_date: res["end_date"],
-                members: res["members"],
-                rated: res["rated"]
-            }
-            
-            #binding.pry
-            ## create an obj 
-            anime = Anime.new(anime_hash)
-            puts anime.title
+        if !data["status"]
+            data["results"].map do |res|
+                #binding.pry
+                anime_hash = {
+                    ## use data["results"]
+                    title: res["title"],
+                    synopsis: res["synopsis"],
+                    airing: res["airing"],
+                    type: res["type"],
+                    episodes: res["episodes"],
+                    score: res["score"],
+                    start_date: res["start_date"],
+                    end_date: res["end_date"],
+                    members: res["members"],
+                    rated: res["rated"]
+                }
+                
+                #binding.pry
+                ## create an obj 
+                anime = Anime.new(anime_hash)
+            end
         end
         # "title"=>"Goblin Slayer: Bouken Kiroku Youshi - Adventure Sheet",
         # "airing"=>false,
@@ -61,8 +62,8 @@ end
 
 
 
-api = Api.new
-api.find_anime_by_name("boxing")
+# api = Api.new
+# api.find_anime_by_name("title")
 
 ## move anime to own file 
 
